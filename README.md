@@ -72,3 +72,18 @@ If you want to evaluate the _HarmonyBatch_ with real function invocation, you ne
 
 ## Publication
 
+Jiabin Chen, Fei Xu, Yikun Gu, Li Chen, Fangming Liu, Zhi Zhou, “HarmonyBatch: Batching multi-SLO DNN Inference with Heterogeneous Serverless Functions”.
+
+We have also uploaded our paper to [arxiv](http://arxiv.org/abs/2405.05633), and we would encourage anybody interested in our work to cite our paper. Our paper as been accepted by IWQOS2024.
+
+```
+@misc{chen2024harmonybatch,
+      title={HarmonyBatch: Batching multi-SLO DNN Inference with Heterogeneous Serverless Functions}, 
+      author={Jiabin Chen and Fei Xu and Yikun Gu and Li Chen and Fangming Liu and Zhi Zhou},
+      year={2024},
+      eprint={2405.05633},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC}
+}
+```
+
