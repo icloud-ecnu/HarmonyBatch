@@ -18,7 +18,7 @@ Based on our DNN inference performance and cost models, we can formulate the opt
     \min_{\mathcal{G}, \mathcal{F}, \mathcal{B}}  & Cost = \sum_{\mathcal{X} \in \mathcal{G}} \eta^{\mathcal{X}} \cdot C^{\mathcal{X}} \\
     s.t. \ \ \ \ 
     &  m^{\mathcal{X}} \geq M^{\mathcal{X}}, \  \forall \ \mathcal{X} \in \mathcal{G} \\
-    & \lfloor r^{\mathcal{X}} \cdot T^{\mathcal{X}} \rfloor, \forall \ \mathcal{X} \in \mathcal{G}\\
+    & b^{\mathcal{X}} \leq \lfloor r^{\mathcal{X}} \cdot T^{\mathcal{X}} \rfloor + 1, \forall \ \mathcal{X} \in \mathcal{G} \\
     &  t^w + L_{max}^{t} \leq s^w, \  \forall \ w \in \mathcal{X}, \ \mathcal{X} \in \mathcal{G}
 \end{align}
 ```
@@ -58,17 +58,6 @@ The configurations of the group 1 is:
 ...
 ```
 
-#### Run the Experimens with Trace
-Set up the model name (i.g., VGG19), algorithm name (i.g., HarmonyBatch), application num and the SLOs of each applications within the configuration file in `conf/config.json`. Running the code for simulation:
-```python
-cd HarmonyBatch
-python3 experiments.py
-```
-After running the code, you will get the `result.csv` file, which including the data every minute as follows :
-```
-SLO violations, cost, inference count, predict cost
-```
-If you want to evaluate the _HarmonyBatch_ with real function invocation, you need to deploy your DNN model on serverless function platform and replace the function url and function name in `experiments.py` in advance.
 
 ## Publication
 
