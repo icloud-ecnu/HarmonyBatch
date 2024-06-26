@@ -18,7 +18,7 @@ Based on our DNN inference performance and cost models, we can formulate the opt
     \min_{\mathcal{G}, \mathcal{F}, \mathcal{B}}  & Cost = \sum_{\mathcal{X} \in \mathcal{G}} \eta^{\mathcal{X}} \cdot C^{\mathcal{X}} \\
     s.t. \ \ \ \ 
     &  m^{\mathcal{X}} \geq M^{\mathcal{X}}, \  \forall \ \mathcal{X} \in \mathcal{G} \\
-    & \lfloor r^{\mathcal{X}} \cdot T^{\mathcal{X}} \rfloor, \forall \ \mathcal{X} \in \mathcal{G}\\
+    & b^{\mathcal{X}} \leq \lfloor r^{\mathcal{X}} \cdot T^{\mathcal{X}} \rfloor + 1, \forall \ \mathcal{X} \in \mathcal{G} \\
     &  t^w + L_{max}^{t} \leq s^w, \  \forall \ w \in \mathcal{X}, \ \mathcal{X} \in \mathcal{G}
 \end{align}
 ```
