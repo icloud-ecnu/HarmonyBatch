@@ -1,6 +1,6 @@
 # HarmonyBatch
 
-_HarmonyBatch_, a cost-efficient resource provisioning framework designed to achieve predictable performance for multi-SLO DNN inference with heterogeneous serverless functions
+_HarmonyBatch_, a cost-efficient resource provisioning framework designed to achieve predictable performance for multi-SLO DNN inference with heterogeneous serverless functions.
 
 ## Prototype of HarmonyBatch
 _HarmonyBatch_  comprises mainly three modules: a model profiler, a performance predictor, and a function provisioner. The model profiler profiles the model with both CPU and GPU functions to acquire model-specific and hardware-specific coefficients. The performance predictor can estimate the inference cost using our performance model. It then guides the function provisioner to identify an appropriate group strategy and function provisioning plans that guarantee the SLOs of all applications. The configurations provided by _HarmonyBatch_ include both batch-related configurations and resource-related configurations. The batch-related configurations will be sent to the batch manager to control the request queue and resource-related configurations will be sent to the serverless platform to update the function. 
